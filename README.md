@@ -3,9 +3,9 @@
 ## start
 ```javascript
 npm install
-node server
+node server.js
 ```
 
 ```javascript
-node client
+node client.js
 ```

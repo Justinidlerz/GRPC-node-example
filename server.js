@@ -2,37 +2,7 @@ const grpc = require('grpc');
 const path = require('path');
 const PROTO_PATH = path.join(__dirname, '/article.proto');
 const article = grpc.load(PROTO_PATH).article;
-
-let db = [{
-  id: '1',
-  content: 'This is your article1',
-  title: 'article title',
-  isPublic: true,
-  url: 'article-title',
-  cover: 'xxxxxx.jpg'
-},{
-  id: '2',
-  content: 'This is your article2',
-  title: 'article title',
-  isPublic: true,
-  url: 'article-title',
-  cover: 'xxxxxx.jpg'
-},{
-  id: '3',
-  content: 'This is your article3',
-  title: 'article title',
-  isPublic: true,
-  url: 'article-title',
-  cover: 'xxxxxx.jpg'
-},{
-  id: '4',
-  content: 'This is your article4',
-  title: 'article title',
-  isPublic: true,
-  url: 'article-title',
-  cover: 'xxxxxx.jpg'
-}];
-
+let db = require('./db.json');
 
 class Article {
   getList (call, callback) {
