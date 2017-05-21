@@ -51,14 +51,6 @@ class Article {
   }
 }
 
-/**
- * Implements the SayHello RPC method.
- */
-function getArticleList(call, callback) {
-  callback(null, {
-    araticle: db
-  });
-}
 const getServer = function (service, serviceCall, lintener){
   const server = new grpc.Server();
   server.addService(service, serviceCall);
